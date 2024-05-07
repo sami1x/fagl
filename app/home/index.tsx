@@ -19,7 +19,6 @@ export default function Page() {
   const user = auth.currentUser;
   const userName = auth.currentUser?.displayName;
 
-  console.log(userName);
   const userEmail = auth.currentUser?.email;
   useEffect(() => {
     const backAction = () => {
@@ -82,12 +81,12 @@ export default function Page() {
             ZiaUllah
           </Text>
           <Text className="text-sm text-white">Email</Text>
-          <Text className="pl-2 pb-2 text-2xl font-bold text-white">
+          <Text className="pb-2 pl-2 text-2xl font-bold text-white">
             {userEmail}
           </Text>
         </View>
-        <View className="mx-5 mt-4 p-4 rounded-3xl bg-white">
-          <GetLocationInfo/>
+        <View className="mx-5 mt-4 rounded-3xl bg-white p-4">
+          <GetLocationInfo />
         </View>
         <Tabs.Screen
           options={{

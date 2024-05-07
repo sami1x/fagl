@@ -14,7 +14,6 @@ export default function GetLocationInfo() {
   const [altitude, setAltitude] = useState<number | null>();
 
   const handleGetLocation = async () => {
-    console.log("this is error message", errorMsg);
     let { status } = await Location.requestForegroundPermissionsAsync();
     if (status !== "granted") {
       setErrorMsg("Permission to access location was denied");
